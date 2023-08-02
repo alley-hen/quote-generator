@@ -15,6 +15,22 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                primary: {
+                    light: '#7dd3fc',
+                    DEFAULT: '#075985',
+                    dark: '#082f49',
+                },
+                secondary: {
+                    light: '#3de7d2',
+                    DEFAULT: '#2dd4bf',
+                    dark: '#0d9488',
+                }
+            },
+            backgroundImage: {
+                'red-bg': "url('../../public/assets/bg.jpg')",
+                'footer-texture': "url('/img/footer-texture.png')",
+            }
         },
     },
 

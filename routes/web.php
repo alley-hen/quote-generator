@@ -24,7 +24,8 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/dashboard', [QuotesController::class, 'showFiveUniqueQuotesFromRemoteApi'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard/restart', [QuotesController::class, 'restartSession'])->middleware(['auth', 'verified'])->name('dashboard-restart');
+Route::get('/dashboard', [QuotesController::class, 'showFiveUniqueQuotes'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
